@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --blue_General: #0079ff;
+  --gray_lightMode: #697c9a;
+  --blueGray_lightMode: #4b6a9b;
+  --black_lightMode: #2b3442;
+  --whiteBlue_lightMode: #f6f8ff;
+  --white_lightMode: #fefefe;
+  --white_darkMode: #ffffff;
+  --black_darkMode: #141d2f;
+  --blackBlue_darkMode: #1e2a47;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-header {
+  font-family: "Space Mono";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.title-header.dark {
+  color: var(--white_darkMode);
+}
+.title-header.light {
+  color: #222731;
+}
+
+.btn-theme {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.ico-light{
+  fill: #697C9A;
+}
+.ico-dark {
+  fill: #FFF;
+}
+.btn-theme:hover .theme-title.light {
+  color: #222731;
+}
+.btn-theme:hover .ico-light {
+  fill: #222731;
+}
+.btn-theme:hover .theme-title.dark {
+  color: #90A4D4;
+}
+.btn-theme:hover .ico-dark {
+  fill: #90A4D4;
+}
+
+.theme-title {
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.5px;
+}
+
+.theme-title.dark{
+    color: var(--white_darkMode);
+}
+
+.theme-title.light{
+    color: var(--gray_lightMode);
+}
+

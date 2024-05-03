@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --blue_General: #0079ff;
+  --gray_lightMode: #697c9a;
+  --blueGray_lightMode: #4b6a9b;
+  --black_lightMode: #2b3442;
+  --whiteBlue_lightMode: #f6f8ff;
+  --white_lightMode: #fefefe;
+  --white_darkMode: #ffffff;
+  --black_darkMode: #141d2f;
+  --blackBlue_darkMode: #1e2a47;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .5s linear;
+}
+
+.dark {
+  background-color: var(--black_darkMode);
+}
+
+.light {
+  background-color: var(--whiteBlue_lightMode);
+}
+
+.principal {
+  width: 730px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .principal {
+    width: 573px;
+  }
+}
+
+@media (max-width: 425px) {
+  .principal {
+    width: 327px;
+  }
+}

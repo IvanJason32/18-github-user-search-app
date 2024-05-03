@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --blue_General: #0079ff;
+  --gray_lightMode: #697c9a;
+  --blueGray_lightMode: #4b6a9b;
+  --black_lightMode: #2b3442;
+  --whiteBlue_lightMode: #f6f8ff;
+  --white_lightMode: #fefefe;
+  --white_darkMode: #ffffff;
+  --black_darkMode: #141d2f;
+  --blackBlue_darkMode: #1e2a47;
+}
+
+.searchBar_container {
+  margin-top: 36px;
+  width: 730px;
+  height: 69px;
+  border-radius: 15px;
+  transition: background-color 0.5s linear;
+  transition: box-shadow 0.5s;
+}
+.search-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-element {
+  margin-left: 32px;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 24px; */
+}
+.input-username {
+  margin-left: 24px;
+  font-family: "Space Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  width: 380px;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: color 0.5s;
+}
+.input-username.dark {
+  color: var(--white_darkMode);
+}
+.input-username.dark::placeholder {
+  color: var(--white_darkMode);
+}
+.input-username.light {
+  color: #222731;
+}
+.input-username.light::placeholder {
+  color: var(--blueGray_lightMode);
+}
+
+.search-element2 {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+.error-alert {
+  color: #f74646;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 92px;
+}
+.btn-search {
+  color: var(--white_darkMode);
+  background-color: var(--blue_General);
+  border-radius: 10px;
+  width: 106px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: background-color .1s linear;
+}
+.btn-search:hover{
+    background-color: #60ABFF;
+}
+
+.searchBar_container.dark {
+  background-color: var(--blackBlue_darkMode);
+}
+.searchBar_container.light {
+  background-color: var(--white_lightMode);
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+
+@media (max-width: 768px) {
+  .searchBar_container {
+    width: 573px;
+  }
+  .search-element {
+    width: 53%;
+  }
+  
+  .search-element2 {
+    gap: 14px;
+  }
+  .error-alert {
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 425px) {
+  .searchBar_container {
+    width: 327px;
+    height: 60px;
+  }
+  
+  .search-element {
+    margin-left: 16px;
+    width: 20%;
+  }
+  .input-username {
+    margin-left: 8.95px;
+    font-size: 12px;
+    width: 130px;
+  }
+  .input-username.dark::placeholder {
+    font-size: 9px;
+  }
+  .input-username.light::placeholder {
+    font-size: 9px;
+  } 
+  
+  .search-element2 {
+    gap: 0px;
+  }
+  .error-alert {
+    font-size: 10px;
+    width: 57px;
+    text-align: center;
+  }
+  .btn-search {
+    width: 84px;
+    height: 46px;
+    margin-right: 7px;
+    font-size: 14px;
+  }
+}
